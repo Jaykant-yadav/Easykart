@@ -1,0 +1,174 @@
+<%- layout("./layouts/boilerplate.ejs") %>
+
+    <div class="container mt-4">
+        <div class="row">
+            <div class="col-md-10 offset-md-1">
+                <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="sorting-buttons">
+                        <div class="btn-group" role="group">
+                            <!-- <button type="button" class="btn btn-sm btn-outline-primary">Newest</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary">Popular</button>
+                            <button type="button" class="btn btn-sm btn-outline-primary">Trending</button> -->
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off"
+                                checked>
+                            <label class="btn btn-outline-primary npt" for="btnradio1">Newest</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off">
+                            <label class="btn btn-outline-primary npt" for="btnradio2">Popular</label>
+
+                            <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off">
+                            <label class="btn btn-outline-primary npt" for="btnradio3">Trending</label>
+
+                        </div>
+                    </div>
+                    <form class="d-flex search-inp col-md-4" role="search">
+                        <!-- <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search"> -->
+                        <!-- <i class="fa-brands fa-searchengin fa-beat fa-2xs" style="color: #6c777f;"></i> -->
+                        <!-- <button class="btn btn-outline-primary" type="submit">Search</button> -->
+                        <div class="google-search-container">
+                            <input type="text" class="google-search-input" placeholder="Search...">
+                            <button class="google-search-button">
+                                <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <% for(let chat of AllChat) {%>
+                    <div class="opinion-card container bg-black">
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="<%= chat.image %>" alt="Profile" class="profile-img">
+                            <span>User123</span>
+                            <button class="btn btn-sm btn-outline-primary follow-button offset-md-9">Join</button>
+                            <div class="dropdown">
+                                <button class="btn three-line" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                                </button>
+                                <ul class="dropdown-menu dropdown-menu-light">
+                                  <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-bookmark"></i>  Save</a></li>
+                                  <li><a class="dropdown-item" href="#"><i class="fa-regular fa-flag"></i>  Report</a></li>
+                                  <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-pen-to-square"></i>  Edit</a></li>
+                                  <li><hr class="dropdown-divider"></li>
+                                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>  Delete</a></li>
+                                </ul>
+                              </div>
+                        </div>
+                        <h5 class="mb-2">
+                            <%= chat.title %>
+                        </h5>
+                        <!-- <div class="container">
+                            <img src="<%= chat.image %>" alt="Opinion Image" class="img-fluid mb-2">
+                        </div> -->
+                        <p>
+                            <%= chat.description %>
+                        </p>
+                        <span class="badge badge-secondary category-badge">Category</span>
+                        <div class="opinion-actions">
+                            <button class="btn btn-sm btn-outline-success"><i class="fas fa-thumbs-up"></i> Like
+                                (10)</button>
+                            <button class="btn btn-sm btn-outline-danger"><i class="fas fa-thumbs-down"></i> Dislike
+                                (2)</button>
+                            <button class="btn btn-sm btn-outline-info"><i class="fas fa-comments"></i> Comments
+                                (5)</button>
+                            <span class="text-muted float-right">1 hour ago</span>
+                        </div>
+                        <button class="btn btn-sm btn-outline-info subscribe-button">Subscribe</button>
+
+                    </div>
+                    <%}%>
+
+                        <!-- <div class="opinion-card">
+                    <div class="d-flex align-items-center mb-2">
+                        <img src="https://via.placeholder.com/40" alt="Profile" class="profile-img">
+                        <span>AnotherUser</span>
+                        <button class="btn btn-sm btn-outline-primary follow-button">Follow</button>
+                    </div>
+                    <h5 class="mb-2">Another Opinion Title</h5>
+                    <img src="https://via.placeholder.com/600x300" alt="Opinion Image" class="img-fluid mb-2">
+                    <p>Another snippet of the opinion. More content here...</p>
+                    <span class="badge badge-secondary category-badge">Another Category</span>
+                    <div class="opinion-actions">
+                        <button class="btn btn-sm btn-outline-success"><i class="fas fa-thumbs-up"></i> Like
+                            (5)</button>
+                        <button class="btn btn-sm btn-outline-danger"><i class="fas fa-thumbs-down"></i> Dislike
+                            (1)</button>
+                        <button class="btn btn-sm btn-outline-info"><i class="fas fa-comments"></i> Comments
+                            (2)</button>
+                        <span class="text-muted float-right">2 hours ago</span>
+                    </div>
+                    <button class="btn btn-sm btn-outline-info subscribe-button">Subscribe</button>
+                </div> -->
+
+            </div>
+
+            <!-- <div class="col-md-4 sidebar">
+                <h5>Categories</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="fas fa-tag"></i> Technology</a></li>
+                    <li><a href="#"><i class="fas fa-tag"></i> Travel</a></li>
+                    <li><a href="#"><i class="fas fa-tag"></i> Food</a></li>
+                    <li><a href="#"><i class="fas fa-tag"></i> Sports</a></li>
+                </ul>
+
+                <h5 class="mt-4">Trending</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="fas fa-fire"></i> Trending Opinion 1</a></li>
+                    <li><a href="#"><i class="fas fa-fire"></i> Trending Opinion 2</a></li>
+                </ul>
+
+                <h5 class="mt-4">User Recommendations</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#"><i class="fas fa-user-plus"></i> User A</a></li>
+                    <li><a href="#"><i class="fas fa-user-plus"></i> User B</a></li>
+                </ul>
+
+                <h5 class="mt-4">Legal</h5>
+                <ul class="list-unstyled">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div> -->
+            <!-- <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+            aria-controls="offcanvasRight">Toggle right offcanvas</button> -->
+
+            <div class="offcanvas offcanvas-vertical-height offcanvas-fixed-top-bottom offcanvas-end" tabindex="-1"
+                id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title offset-md-4" id="offcanvasRightLabel"></h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <div class="col-md-4 sidebar">
+                        <h5>Categories</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fas fa-tag"></i> Technology</a></li>
+                            <li><a href="#"><i class="fas fa-tag"></i> Travel</a></li>
+                            <li><a href="#"><i class="fas fa-tag"></i> Food</a></li>
+                            <li><a href="#"><i class="fas fa-tag"></i> Sports</a></li>
+                        </ul>
+
+                        <h5 class="mt-4">Trending</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fas fa-fire"></i> Trending Opinion 1</a></li>
+                            <li><a href="#"><i class="fas fa-fire"></i> Trending Opinion 2</a></li>
+                        </ul>
+
+                        <h5 class="mt-4">User Recommendations</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><i class="fas fa-user-plus"></i> User A</a></li>
+                            <li><a href="#"><i class="fas fa-user-plus"></i> User B</a></li>
+                        </ul>
+
+                        <h5 class="mt-4">Legal</h5>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>

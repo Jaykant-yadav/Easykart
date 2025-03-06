@@ -1,0 +1,31 @@
+<body>
+    <%- layout("./layouts/boilerplate.ejs") %>
+        <!-- <h3>All Chats</h3> -->
+        <!-- <form action="/chats/new" method="GET">
+            <button>Create new Post</button>
+        </form> -->
+        <!-- <ul>
+            <% for(let chat of AllChat) {%>
+                <li> <a href="/chats/<%= chat._id %>">
+                        <%= chat.title %>
+                    </a>
+
+                </li>
+                <%}%>
+        </ul> -->
+
+        <% for(let chat of AllChat) {%>
+        <div class="card hero-card">
+            <a href="/chats/<%= chat._id %>" ><img src="<%= chat.image %>" class="card-img-top" alt="..."></a>
+            <div class="card-body">
+                <h5 class="card-title"><%= chat.title %></h5>
+                <p class="card-text"><%= chat.description %></p>
+                <a href="/chats/<%= chat._id %>" class="btn btn-primary show-btn">Show Details</a>
+            </div>
+        </div>
+        <% } %>
+        
+
+</body>
+
+</html>

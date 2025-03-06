@@ -1,0 +1,21 @@
+<%- layout("./layouts/boilerplate.ejs")%>
+
+<body>
+    <h1>Users Details</h1>
+    <ul>
+        <li><%= chats.title %></li>
+        <li><%= chats.description %></li>
+        <li><%= chats.image %></li>
+        <li><%= chats.category %></li>
+        <li><%= chats.profileImage %></li>
+        <li><%= chats.location %></li>
+        <li><%= chats.country %></li>
+    </ul>
+    <br>
+    <a href="/chats/<%= chats._id %>/edit">Edit Post</a>
+    <br><br>
+    <form action="/chats/<%= chats._id %>?_method=DELETE" method="post">
+        <button>Delete Post</button>
+    </form>
+</body>
+</html>

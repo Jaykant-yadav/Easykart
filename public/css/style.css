@@ -1,0 +1,271 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #000000;
+}
+
+.container {
+    flex: 1;
+}
+
+/* Navbar */
+/* Navbar link animation */
+.brands {
+    text-decoration: underline red;
+}
+
+.nav-item a {
+    position: relative;
+    display: inline-block;
+    color: #333;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+/* Hover effect - underline animation */
+.nav-item a::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: #007bff;
+    /* Bootstrap primary color */
+    transition: all 0.3s ease-in-out;
+    transform: translateX(-50%);
+}
+
+.nav-item a:hover {
+    color: #007bff;
+    /* Change text color on hover */
+}
+
+.nav-item a:hover::after {
+    width: 90%;
+    /* Underline expands */
+}
+
+/* user */
+.user-dropdown .dropdown-menu {
+    min-width: 2rem;
+}
+
+.user-dropdown .dropdown-item {
+    padding: 0.5rem 1rem;
+}
+
+.user-dropdown .dropdown-item i {
+    margin-right: 0.5rem;
+}
+
+/* btn */
+.dropdown-toggle {
+    margin-right: 0.6rem;
+    border: none;
+}
+
+/* logo */
+.fa-brands {
+    font-size: 3rem;
+    color: blue;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+/* letest */
+.btn-group {
+    height: 2rem !important;
+}
+
+.btn-group .btn {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Search Box */
+.google-search-container {
+    display: flex;
+    align-items: center;
+    border: 2px solid #dfe1e5;
+    border-radius: 24px;
+    padding: 4px 8px;
+    width: 400px;
+    /* Adjust as needed */
+    margin: 20px auto;
+    /* Center the search box */
+    height: 2.7rem;
+}
+
+.google-search-input {
+    border: none;
+    outline: none;
+    flex-grow: 1;
+    padding: 8px 16px;
+    font-size: 14px;
+    border-radius: 24px;
+    background-color: #000000;
+    color: white;
+}
+
+.google-search-button {
+    background: none;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    color: #5f6368;
+}
+
+.google-search-button:hover {
+    color: white;
+}
+
+.google-search-input:focus,
+.google-search-button:focus {
+    /* box-shadow: 0 1px 6px rgba(32, 33, 36, 0.70); */
+    box-shadow: 0.5px 0.3px 0.2px rgba(0, 0, 0, 0.08);
+
+    border-radius: 24px;
+
+}
+
+.google-search-container:focus-within {
+    box-shadow: 0.5px 0.3px 0.2px rgba(0, 0, 0, 0.08);
+}
+
+ /* ****************************************************************************** */
+
+/* Card */
+/* .hero-card {
+    height: 26rem;
+    width: 18rem;
+    display: inline-flex;
+    margin: 1.5rem auto auto 1.5rem;
+    text-align: center;
+} */
+
+/* .card-img-top {
+    border-radius: 0.5rem !important;
+    width: 100% !important;
+    height: 12rem;
+    object-fit: cover !important;
+    min-width: 20%;
+} */
+
+/* .card-body {
+    padding: 10px !important;
+} */
+
+/* .card-text p {
+    font-weight: 400 !important;
+} */
+
+/* Card Effect */
+
+/* .card-img-top:hover {
+    opacity: 0.2;
+    background-color: white;
+} */
+ /* ****************************************************************************** */
+
+
+/* Hero part */
+
+.opinion-card {
+    border: 1px solid #dee2e6;    
+    color: #dee2e6;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    box-shadow: 1px 2px 3px rgba(252, 224, 224, 0.1);
+}
+
+.profile-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 0.75rem;
+}
+
+.sidebar {
+    padding: 1.5rem;
+    border-left: 1px solid #dee2e6;
+}
+
+.opinion-actions {
+    margin-top: 1rem;
+}
+
+.category-badge {
+    margin-bottom: 0.5rem;
+}
+
+.search-bar {
+    width: 250px;
+}
+
+.sorting-buttons {
+    margin-right: 1rem;
+}
+
+.follow-button, .subscribe-button {
+    margin-top: 0.5rem;
+}
+
+/* sidebar */
+.offcanvas-vertical-height {
+    height: 95%;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    overflow-y: auto;
+    width: 23% !important;
+}
+
+/* post image */
+.aspect-ratio-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    /* 16:9 aspect ratio */
+}
+
+.aspect-ratio-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Follow Btn */
+.opinion-card .follow-button {
+    border-radius: 22px;
+    width: 5rem;
+    height: 1.8rem;
+}
+
+/* Three Dot */
+.three-line{
+    margin-top: 4px;
+    border: none;
+    outline: none;
+    margin-left: 1.2rem;
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+

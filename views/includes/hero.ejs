@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Badge Card</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome for Heart Icon -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+<div class="container mt-5 d-flex justify-content-center">
+    <div class="card badge-card">
+        <!-- Image -->
+        <img src="https://images.unsplash.com/photo-1437719417032-8595fd9e9dc6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=600&q=80" 
+             class="card-img-top" alt="Verudela Beach">
+        
+        <div class="card-body">
+            <!-- Title and Country Badge -->
+            <div class="d-flex justify-content-between align-items-center">
+                <h5 class="fw-bold">Verudela Beach</h5>
+                <span class="badge country-badge">Croatia</span>
+            </div>
+            
+            <p class="text-muted description mt-2">
+                Completely renovated for the season 2020, Arena Verudela Beach Apartments are fully equipped and modernly 
+                furnished 4-star self-service apartments located on the Adriatic coastline by one of the most beautiful beaches in Pula.
+            </p>
+        </div>
+
+        <!-- Badge Section -->
+        <div class="px-3">
+            <p class="text-muted fw-semibold">Perfect for you, if you enjoy</p>
+            <div class="badges">
+                <span class="badge">☀️ Sunny weather</span>
+                <span class="badge">🦓 Onsite zoo</span>
+                <span class="badge">🌊 Sea</span>
+                <span class="badge">🌲 Nature</span>
+                <span class="badge">🤽 Water sports</span>
+            </div>
+        </div>
+
+        <!-- Buttons Section -->
+        <div class="buttons p-3 d-flex justify-content-between align-items-center">
+            <button class="btn btn-primary flex-grow-1 me-2">Show details</button>
+            <button class="like-button" onclick="toggleLike(this)">
+                <i class="far fa-heart"></i>
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- JavaScript for Like Button -->
+<script>
+    function toggleLike(button) {
+        const icon = button.querySelector("i");
+        if (icon.classList.contains("far")) {
+            icon.classList.remove("far");
+            icon.classList.add("fas", "text-danger");
+        } else {
+            icon.classList.remove("fas", "text-danger");
+            icon.classList.add("far");
+        }
+    }
+</script>
+
+</body>
+</html>

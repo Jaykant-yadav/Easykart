@@ -1,0 +1,14 @@
+<body>
+    <% layout('./layouts/boilerplate.ejs')-%>
+    <h1>Edit Post</h1>
+    <form action="/chats/<%= chats._id %>?_method=put" method="post">
+        <input type="text" name="chat[title]" id="" value="<%= chats.title %> "><br>
+        <textarea name="chat[description]" id="" value=""> <%= chats.description %></textarea><br>
+        <input type="text" name="chat[image]" id="" value="<%= chats.image %>"><br>
+        <input type="text" name="chat[category]" id="" value="<%= chats.category %>"><br>
+        <input name="chat[profileImage]" id="" value="<%= chats.profileImage %>"><br>
+        <input name="chat[location]" id="" value="<%= chats.location %>"><br>
+        <input name="chat[country]" id="" value="<%= chats.country %>"><br>
+        <button>Save</button>
+    </form>
+</body>
