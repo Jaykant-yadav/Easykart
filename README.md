@@ -114,10 +114,6 @@ Contributions are welcome! If you find a bug or have an idea for a new feature, 
 4.  Push your changes to your fork.
 5.  Submit a pull request.
 
-## License
-
-(Specify your license: e.g., MIT, Apache 2.0, GPL, etc.)
-
 ## Contact
 
 (Your contact information or links to your social media profiles)
