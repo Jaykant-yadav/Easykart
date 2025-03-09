@@ -2,7 +2,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #000000;
+    /* background-color: #000000; */
 }
 
 .container {
@@ -257,6 +257,19 @@ body {
     outline: none;
     margin-left: 1.2rem;
     color: white;
+}
+
+/* Post discriptions */
+.postdesc {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: white;
+}
+
+/* Show Page */
+.showimage {
+    height: 15px;
+    width: 20px;
 }
 
 

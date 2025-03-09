@@ -40,27 +40,39 @@
                             <span>User123</span>
                             <button class="btn btn-sm btn-outline-primary follow-button offset-md-9">Join</button>
                             <div class="dropdown">
-                                <button class="btn three-line" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                <button class="btn three-line" type="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
                                     <i class="fa-solid fa-ellipsis-vertical"></i>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-light">
-                                  <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-bookmark"></i>  Save</a></li>
-                                  <li><a class="dropdown-item" href="#"><i class="fa-regular fa-flag"></i>  Report</a></li>
-                                  <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-pen-to-square"></i>  Edit</a></li>
-                                  <li><hr class="dropdown-divider"></li>
-                                  <li><a class="dropdown-item" href="#"><i class="fa-solid fa-trash"></i>  Delete</a></li>
+                                    <li><a class="dropdown-item" href="#"> <i class="fa-regular fa-bookmark"></i>
+                                            Save</a></li>
+                                    <li><a class="dropdown-item" href="#"><i class="fa-regular fa-flag"></i> Report</a>
+                                    </li>
+                                    <li><a class="dropdown-item" href="/chats/<%= chat._id %>/edit"> <i
+                                                class="fa-regular fa-pen-to-square"></i> Edit</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <form action="/chats/<%= chat._id %>?_method=DELETE" method="post">
+                                            <button class="dropdown-item"><i class="fa-solid fa-trash"></i> Delete</button>
+                                        </form>
+                                    </li>
                                 </ul>
-                              </div>
+                            </div>
                         </div>
                         <h5 class="mb-2">
                             <%= chat.title %>
                         </h5>
-                        <!-- <div class="container">
-                            <img src="<%= chat.image %>" alt="Opinion Image" class="img-fluid mb-2">
-                        </div> -->
-                        <p>
-                            <%= chat.description %>
-                        </p>
+                        <a href="/chats/<%= chat._id %>">
+                            <div class="container">
+                                <img src="<%= chat.image %>" alt="Opinion Image" class="img-fluid mb-2">
+                            </div>
+                            <p class="postdesc">
+                                <%= chat.description %>
+                            </p>
+                        </a>
                         <span class="badge badge-secondary category-badge">Category</span>
                         <div class="opinion-actions">
                             <button class="btn btn-sm btn-outline-success"><i class="fas fa-thumbs-up"></i> Like
