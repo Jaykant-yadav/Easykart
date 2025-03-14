@@ -1,0 +1,54 @@
+<%- layout("./layouts/template.ejs")%>
+
+  <!-- <body>
+    <div class="card mb-3">
+        <img src=" product.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title"> product.title %></h5>
+          <p class="card-text"> product.description %></p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    <h1>Users Details</h1>
+    
+    <br>
+    <a href="/chats/ product._id %>/edit">Edit Post</a>
+    <br><br>
+    <form action="/chats/ product._id %>?_method=DELETE" method="post">
+        <button>Delete Post</button>
+    </form>
+</body>
+</html> -->
+  <div class="mt-1 bg-body-tertiary row">
+    <div class="col-sm-5 mb-3 mt-2">
+      <div class="card card-show p-3">
+        <img src="<%= Products.image %>" class="card-img-top" alt="...">
+        <!-- <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div> -->
+      </div>
+    </div>
+    <div class="col-sm-2 col-md-4 mt-5">
+      <div class="row">
+        <div class="">
+          <p class="brandName mb-0"><b>
+              <%= Products.brandName %>
+            </b></p>
+          <h5 class="card-title pr-show">
+            <%= Products.productTitle %>
+          </h5>
+          <p class="special-price">Special price</p>
+          <p class="card-text">&#8377; <%= Products.price.toLocaleString("en-IN") %>&nbsp;
+              <s class="disPrice">&#8377;<%= Products.discount.disPrice %></s>&nbsp;
+              <span class="off">
+                <%= Products.discount.offPer %>% off
+              </span></p>
+          <p><span class="size"><b>Size</b></span>
+            <%= Products.size.toUpperCase() %>
+            <hr>
+        </div>
+      </div>
+    </div>
+  </div>

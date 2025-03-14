@@ -1,64 +1,56 @@
-<!-- Responsive Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light sticky-top bg-body-tertiary fixed-top">
-  <div class="container">
-    <!-- Text Logo -->
-    <a class="navbar-brand fw-bold fs-4 text-dark brands" href=""><i class="fa-brands fa-slideshare"></i> OPINION
-      SHARE</a>
-    <!-- Toggler / Hamburger Icon -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive"
-      aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <!-- Collapsible Content -->
-    <div class="collapse navbar-collapse" id="navbarResponsive">
-      <!-- Navigation Links -->
-      <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-        <li class="nav-item mx-2"> <!-- Added mx-2 for spacing -->
-          <a class="nav-link text-dark" href="/chats"><i class="fas fa-home"></i> Home</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link text-dark" href="#"><i class="fas fa-list"></i> Categories</a>
-        </li>
-        <li class="nav-item mx-2">
-          <a class="nav-link text-dark" href="#"><i class="fa-solid fa-fire"></i> Popular</a>
-        </li>
-        <li class="btn text-dark nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
-          aria-controls="offcanvasRight"><i class="fa-solid fa-layer-group"></i> Explore</li>
-        <li class="nav-item mx-2">
-          <a class="nav-link text-dark" href="/chats/new"><i class="fa-solid fa-plus"></i> Create</a>
-        </li>
-      </ul>
-
-      <!-- Right Side: Search Form and Auth Buttons -->
-      <div class="d-flex flex-wrap align-items-center">
-        <!-- <form class="d-flex me-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search..." aria-label="Search" />
-          <button class="btn btn-primary" type="submit">Search</button>
-        </form> -->
-        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-          <ul class="navbar-nav">
-            <li class="nav-item dropdown">
-              <button class="btn dropdown-toggle user" data-bs-toggle="dropdown" aria-expanded="true">
-                <i class="fas fa-user"></i> User
-              </button>
-              <ul class="dropdown-menu dropdown-menu-light">
-                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-address-card"></i> Profile</a></li>
-                <li><a class="dropdown-item" href="#">Posts</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-gear"></i> Settings</a></li>
-                <li>
-                  <hr class="dropdown-divider">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid ">
+        <div class="row">
+            <a class="navbar-brand offset-md-10" href="/easykart"><i class="fa-solid fa-dumpster"></i>
+                    Easykart</a>
+        </div>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent row">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 offset-md-2">
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Fashion</a>
                 </li>
-                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></li>
-                <li><a class="dropdown-item" href="#"><i class="fa-solid fa-circle-question"></i> Help?</a></li>
-              </ul>
-            </li>
-          </ul>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" href="#">Electronics</a>
+                </li>
+                <li class="nav-item mx-2">
+                    <a class="nav-link" aria-disabled="true">Today's Deals</a>
+                </li>
+                <form class="d-flex search-inp mx-2 me-5" role="search">
+                    <div class="google-search-container">
+                        <input type="text" class="google-search-input form-control"
+                            placeholder="Search for product, brand and more...">
+                        <button class="google-search-button btn">
+                            <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+                        </button>
+                    </div>
+                </form>
+                <div class="dropdown">
+                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="fa-regular fa-user"></i> Login
+                    </button>
+                    <ul class="dropdown-menu">
+                        <li><a class="dropdown-item" href="#">New customer? &nbsp; <span
+                                    class="text-success h6">SignUp</span></a></li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person-circle"></i> &nbsp;My Profile</a>
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-seam"></i> &nbsp;Orders</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-heart"></i> &nbsp;Wishlist</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-box-arrow-right"></i> &nbsp;Logout</a>
+                        </li>
+                    </ul>
+                </div>
+                <li class="nav-item mx-2">
+                    <button class="btn cart"><i class="fa-solid fa-cart-plus"></i> Cart</button>
+                </li>
+            </ul>
         </div>
-        <div class="nav-item">
-          <a class="nav-link" href="#"><i class="fas fa-sign-in-alt"></i> Login/Signup</a>
-        </div>
-      </div>
     </div>
-  </div>
 </nav>
