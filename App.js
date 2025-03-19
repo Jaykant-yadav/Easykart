@@ -1,4 +1,7 @@
 //All PACKAGE Require
+if(process.env.NODE_ENV != "production") {
+    require('dotenv').config();
+};
 const express = require("express");
 const app = express();
 const path = require("path");
@@ -6,6 +9,9 @@ const ejsMate = require("ejs-mate");
 const mongoose = require("mongoose");
 const products = require("./models/Product.js");
 const methodOverride = require('method-override');
+const multer = require("multer");
+const {storage} = require("./cloudConfig.js");
+const upload = multer({ storage });
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -13,6 +19,7 @@ app.use(express.static(path.join(__dirname, "/public")));
 app.use(express.urlencoded({extended: true}));
 app.use(methodOverride("_method"));
 app.engine('ejs', ejsMate);
+
 
 //database connectivity
 main()
@@ -25,6 +32,19 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/Easykart');
 }
 
+//Set up multer to store files in /uploads folder
+// const storage = multer.diskStorage({
+//     destination: function (req, file, cb) {
+//       cb(null, '/uploads');
+//     },
+//     filename: function (req, file, cb) {
+//         const uniqueSuffix = Date.now();
+//         cb(null, uniqueSuffix + '-' + file.originalname);
+//       }
+//     })
+    
+//     const upload = multer({ storage: storage });
+
 //REST API
 
 //index Route
@@ -33,19 +53,17 @@ app.get("/easykart", async (req, res) => {
     res.render("./ecommerce/index.ejs", {Products});
 });
 
-//Deshboard
-// app.get("/deshboard", async (req, res) => {
-//     const AllChat = await Chat.find({});
-//     res.render("./includes/deshboard.ejs", {AllChat});
-// });
-
-
-
 
 //New Route
 app.get("/products/new", (req, res) => {
     res.render("./ecommerce/addNewproduct.ejs");
 });
+
+//Deshboard
+// app.get("/deshboard", async (req, res) => {
+//     const AllChat = await Chat.find({});
+//     res.render("./includes/deshboard.ejs", {AllChat});
+// });
 
 // Show Route
 app.get("/products/:id", async (req, res) => {
@@ -56,10 +74,20 @@ app.get("/products/:id", async (req, res) => {
 });
 
 //Create Route
-// app.post("/chats", async(req, res) => {
-//     const newChat = new Chat(req.body.chat);
-//     await newChat.save();
-//     res.redirect("/chats")
+app.post("/products",upload.single('product[image]'), async(req, res) => {
+    let url = req.file.path;
+    let filename = req.file.filename;
+    // console.log(url, "..", filename);
+    let newProduct = new products(req.body.product);
+    newProduct.image = {url, filename};
+    await newProduct.save();
+    // console.log(newProduct);
+    res.redirect("/easykart");
+        // res.send(req.file);
+});
+
+// app.post(upload.single('listing[image]'),(req, res) => {
+//     res.send(req.file);
 // });
 
 //Edit Route

@@ -54,13 +54,13 @@
             </form>
         </div>
 </body> -->
-
+<body>
     <div class="bg-body-tertiary mt-4">
         <h1 class="p-3 ">Product Details</h1>
-        <form class="row g-3 needs-validation p-4 p" novalidate>
+        <form  action="/products" method="post" enctype="multipart/form-data" class="row g-3 needs-validation p-4 p" novalidate>
             <div class="col-md-4">
                 <label for="validationCustom01" class="form-label">Title</label>
-                <input type="text" class="form-control" id="validationCustom01" placeholder="enter product title"
+                <input type="text" class="form-control" id="validationCustom01" name="product[productTitle]" placeholder="enter product title"
                     required>
                 <div class="valid-feedback">
                     Looks good!
@@ -68,36 +68,36 @@
             </div>
             <div class="col-md-3">
                 <label for="validationCustom03" class="form-label">Color</label>
-                <input type="text" class="form-control" id="validationCustom03" placeholder="brown" required>
+                <input type="text" class="form-control" id="validationCustom03" name="product[color]" placeholder="brown" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
             <div class="col-md-4">
                 <label for="validationCustom07" class="form-label">Size</label>
-                <input type="text" class="form-control" id="validationCustom07" placeholder="S, M, L, XL, XXL" required>
+                <input type="text" class="form-control" id="validationCustom07" name="product[size]" placeholder="S, M, L, XL, XXL" required>
                 <div class="invalid-feedback">
                     Please provide a valid size.
                 </div>
             </div>
             <div class="col-md-3">
-                <label for="validationCustom04" class="form-label">Price</label>
-                <input type="number" class="form-control" id="validationCustom04" placeholder="999" min="50" required>
+                <label for="validationCustom04" class="form-label">Base Price</label>
+                <input type="number" class="form-control" id="validationCustom04" placeholder="999" name="product[price]" min="50" required>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
             </div>
             
             <div class="col-md-3">
-                <label for="validationCustom05" class="form-label">Original Price</label>
-                <input type="number" class="form-control" id="validationCustom05" placeholder="2999" required>
+                <label for="validationCustom05" class="form-label">Discounted Price</label>
+                <input type="number" class="form-control" id="validationCustom05" name="product[discPrice]"  placeholder="2999" required>
                 <div class="invalid-feedback">
                     Please provide a valid discount price.
                 </div>
             </div>
             <div class="col-md-3">
                 <label for="validationCustom06" class="form-label">Discount Percentage</label>
-                <input type="number" class="form-control" id="validationCustom06" placeholder="18" required>
+                <input type="number" class="form-control" id="validationCustom06" name="product[discPer]" placeholder="18" required>
                 <div class="invalid-feedback">
                     Please provide a valid discount percentege.
                 </div>
@@ -105,7 +105,7 @@
             
             <div class="col-md-6">
                 <label for="validationCustom08" class="form-label">Brand Name</label>
-                <input type="text" class="form-control" id="validationCustom08" placeholder="Enter brand name..."
+                <input type="text" class="form-control" id="validationCustom08" name="product[brandName]" placeholder="Enter brand name..."
                 required>
                 <div class="invalid-feedback">
                     Please provide a valid Brand Name.
@@ -113,13 +113,13 @@
             </div>
             <div class="col-md-6">
                 <label for="validationCustom09" class="form-label">Product Image</label>
-                <input type="file" class="form-control"id="validationCustom08" aria-label="file example" required>
+                <input type="file" class="form-control"id="validationCustom08" name="product[image]" aria-label="file example" required>
                 <div class="invalid-feedback">Example invalid form file feedback</div>
             </div>
             
             
             
-            <div class="col-md-3">
+            <!-- <div class="col-md-3">
                 <label for="validationCustom04" class="form-label">State</label>
                 <select class="form-select" id="validationCustom04" required>
                     <option selected disabled value="">Choose...</option>
@@ -146,11 +146,11 @@
                         You must agree before submitting.
                     </div>
                 </div>
-            </div>
+            </div> -->
             <div class="col-md-4">
                 <label for="validationCustom02" class="form-label">Description</label>
                 <textarea type="text" class="form-control" id="validationCustom02"
-                    placeholder="Write product valid description..." required></textarea>
+                    placeholder="Write product valid description..." name="product[description]" required></textarea>
                 <div class="valid-feedback">
                     Looks good!
                 </div>
@@ -160,3 +160,5 @@
             </div>
         </form>
     </div>
+</body>
+    

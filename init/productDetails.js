@@ -10,7 +10,10 @@ const productDetails = [
         },
         size: "S, M, L, XL",
         brandName: "Rare Times",
-        image: 'https://rukminim2.flixcart.com/image/832/832/jvtujrk0/jacket/q/d/q/xl-6832211-wrogn-original-imafgmsmh5urtr9q.jpeg?q=70&crop=false',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/832/832/jvtujrk0/jacket/q/d/q/xl-6832211-wrogn-original-imafgmsmh5urtr9q.jpeg?q=70&crop=false',
+            filename: 'jacket1',
+        }
     },
     {
         productTitle: 'Men Printed Tailored Jacket',
@@ -23,7 +26,10 @@ const productDetails = [
         },
         size: "S, M, XL",
         brandName: "RED TAPE",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/s/y/f/-original-imagyj95afhctgfh.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/s/y/f/-original-imagyj95afhctgfh.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -36,7 +42,10 @@ const productDetails = [
         },
         size: "M, L, XXL",
         brandName: "FUTSE PENO",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/y/n/6/xxl-no-multicolor-part-3-azmani-original-imah7fdfwp4cun4n.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/y/n/6/xxl-no-multicolor-part-3-azmani-original-imah7fdfwp4cun4n.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -49,7 +58,10 @@ const productDetails = [
         },
         size: "S, M, L, XL",
         brandName: "TECHNOSPORT",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/m/e/w/xl-no-jtp328488-paul-street-original-imah6mhyvx2rw7hj.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/m/e/w/xl-no-jtp328488-paul-street-original-imah6mhyvx2rw7hj.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -62,7 +74,10 @@ const productDetails = [
         },
         size: "S, M, L, XL, XXL",
         brandName: "VOXATI",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/g/j/x/s-1-no-mt4-jkt-hood-windc-gone-white-red-strip-motrex-original-imah5ghqxxxnm8kd.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/g/j/x/s-1-no-mt4-jkt-hood-windc-gone-white-red-strip-motrex-original-imah5ghqxxxnm8kd.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -75,7 +90,10 @@ const productDetails = [
         },
         size: "S, M, L, XL",
         brandName: "Ryker",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/u/d/k/xxl-no-phjk000001-highlander-original-imagtmrh9brzbajc.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/u/d/k/xxl-no-phjk000001-highlander-original-imagtmrh9brzbajc.jpeg?q=70',  
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -88,7 +106,10 @@ const productDetails = [
         },
         size: "S, M",
         brandName: "Urbano Fashion",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/5/6/r/xxl-1-no-jkt1-vebnor-original-imah7fagvu9prczj.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/5/6/r/xxl-1-no-jkt1-vebnor-original-imah7fagvu9prczj.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
     {
         productTitle: 'Men Solid Leather Jacket',
@@ -101,7 +122,10 @@ const productDetails = [
         },
         size: "S, M, L",
         brandName: "MAZMUN",
-        image: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/e/f/g/m-1-no-upar-wind-1-futse-peno-original-imah4qyqypkbkez8.jpeg?q=70',
+        image: {
+            url: 'https://rukminim2.flixcart.com/image/612/612/xif0q/jacket/e/f/g/m-1-no-upar-wind-1-futse-peno-original-imah4qyqypkbkez8.jpeg?q=70',
+            filename: 'jacket1',
+        },
     },
 ]
 

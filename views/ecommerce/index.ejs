@@ -6,7 +6,7 @@
                 <% for(product of Products){ %>
                     <div class="col shadow-lg mb-0 p-3 bg-body-tertiary">
                         <div class="card">
-                            <a href="/Products/<%= product._id %>"><img src="<%= product.image %>" class="card-img-top" style="height: 22rem;" alt="..."></a>
+                            <a href="/Products/<%= product._id %>"><img src="<%= product.image.url %>" class="card-img-top" style="height: 22rem;" alt="..."></a>
                             <div class="card-body">
                                 <p class="brandName mb-0"><b><%= product.brandName %></b></p>
                                 <h5 class="card-title">
