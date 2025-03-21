@@ -290,9 +290,27 @@ li a {
 
 .payment-partner{
     color: #001e2b;
-    display: flex;
 }
 
 .app-button {
     display: flex;
+}
+
+.payments {
+    margin-right: 2rem;
+}
+
+.copy-right {
+    color: #555;
+    margin-bottom: 0px;
+}
+
+.f-icon {
+    color: black;
+    background-color: #dfe2e1;
+    outline: none;
+    border-radius: 15px;
+    border: none;
+    display: flex;
+    /* align-content: end; */
 }
