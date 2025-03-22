@@ -1,33 +1,21 @@
 <%- layout("./layouts/template.ejs")%>
-
-  <!-- <body>
-    <div class="card mb-3">
-        <img src=" product.image %>" class="card-img-top" alt="...">
-        <div class="card-body">
-          <h5 class="card-title"> product.title %></h5>
-          <p class="card-text"> product.description %></p>
-          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+  <div class="mt-2 bg-body-tertiary row mb-2 rounded">
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mt-2">
+        <li class="breadcrumb-item"><a href="/easykart">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Product show</li>
+      </ol>
+    </nav>
+    <div class="col-sm-5 mb-3 mt-2">
+      <div class="card card-show rounded">
+        <img src="<%= Products.image.url %>" class="card-img-top" alt="...">
+        <div class="card-img-overlay rounded">
+          <button class="btn heart"><i class="bi bi-heart"></i></button>
         </div>
       </div>
-    <h1>Users Details</h1>
-    
-    <br>
-    <a href="/chats/ product._id %>/edit">Edit Post</a>
-    <br><br>
-    <form action="/chats/ product._id %>?_method=DELETE" method="post">
-        <button>Delete Post</button>
-    </form>
-</body>
-</html> -->
-  <div class="mt-1 bg-body-tertiary row">
-    <div class="col-sm-5 mb-3 mt-2">
-      <div class="card card-show p-3">
-        <img src="<%= Products.image %>" class="card-img-top" alt="...">
-        <!-- <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div> -->
+      <div class="mt-4">
+        <button class="buy"><i class="bi bi-fire"></i> <a href="#">Buy now</a></button>
+        <button class="cart"><i class="fa-solid fa-cart-plus"></i> <a href="#">Add to cart</a></button>
       </div>
     </div>
     <div class="col-sm-2 col-md-4 mt-5">
@@ -47,8 +35,70 @@
               </span></p>
           <p><span class="size"><b>Size</b></span>
             <%= Products.size.toUpperCase() %>
-            <hr>
         </div>
+        <hr>
+        <div>
+        </div>
+      </div>
+    </div>
+    <p class="d-inline-flex gap-5 border-bottom border-success">
+      <a class="btn s-btn" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+        aria-controls="collapseExample ac">
+        Product Details
+      </a>
+      <button class="btn s-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseInfo"
+        aria-expanded="false" aria-controls="collapseInfo">
+        Information
+      </button>
+      <button class="btn s-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        Reviews
+      </button>
+      <button class="btn s-btn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample"
+        aria-expanded="false" aria-controls="collapseExample">
+        Seller
+      </button>
+    </p>
+    <div class="collapse" id="collapseExample">
+      <div class="card card-body s-info">
+        Some placeholder content for the collapse component. This panel is hidden by default but revealed when the user
+        activates the relevant trigger.
+      </div>
+    </div>
+    <div class="collapse" id="collapseInfo">
+      <div class="card card-body s-info">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum in lacus, integer.
+        Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, varius habitant ornare ac rhoncus. Consequat risus
+        facilisis ante ipsum netus risus adipiscing sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit.
+      </div>
+    </div>
+
+    <div class="dropdown-center">
+      <button class="btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Centered dropdown
+      </button>
+      <div class="dropdown-menu card card-body">
+        <h1>Nutrient Value & Benefits</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nisi, tellus iaculis urna bibendum in lacus, integer.
+        Id imperdiet vitae varius sed magnis eu nisi nunc sit. Vel, varius habitant ornare ac rhoncus. Consequat risus
+        facilisis ante ipsum netus risus adipiscing sagittis sed. Lorem ipsum dolor sit amet, consectetur adipiscing
+        elit.</p>
+
+        <h1>Storage Tips</h1>
+        <p>Nisi, tellus iaculis urna bibendum in lacus, integer. Id imperdiet vitae varius sed magnis eu nisi nunc sit.
+        Vel, varius habitant ornare ac rhoncus. Consequat risus facilisis ante ipsum netus risus adipiscing sagittis
+        sed.Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+        <h5>Unit</h5>
+        <p>3 units</p>
+
+        <h6>Seller</h6>
+        <p>DMart Pvt. LTD</p>
+
+        <h5>Disclaimer</h5>
+        <p>Image shown is a representation and may slightly vary from the actual product. Every effort is made to maintain
+        accuracy of all information displayed.</p>
       </div>
     </div>
   </div>

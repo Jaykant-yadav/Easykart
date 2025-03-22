@@ -248,6 +248,8 @@ body {
 /* Product Show */
 .card-show {
     width: 25rem;
+    border: none;
+    border-radius: 10px;
 }
 
 .pr-show {
@@ -258,6 +260,74 @@ body {
     color: #0aad0a;
     font-size: 15px;
     margin-top: 0.7rem;
+}
+
+.buy {
+    width: 10rem;
+    height: 2.4rem;
+    margin-left: 1.5rem;
+    padding: 3px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0aad0a;
+    color: white;
+}
+
+.cart {
+    width: 10rem;
+    height: 2.4rem;
+    margin-left: 1rem;
+    padding: 3px;
+    border-radius: 10px;
+    border: none;
+    background-color: #0aad0a;
+    color: white;
+}
+
+.cart a {
+    text-decoration: none;
+    color: white;
+}
+
+.buy a {
+    text-decoration: none;
+    color: white;
+}
+
+.heart {
+    background-color: white;
+    border: none;
+    color: #0aad0a;
+    margin-left: 20rem;
+    border-radius: 25px;
+    padding: 10px 15px 10px 15px;
+}
+
+.heart:hover {
+    background-color: #0aad0a;
+    color: whitesmoke;
+}
+
+.buy:hover {
+    background-color: #0c8e0c;
+    color: white;
+}
+
+.cart:hover {
+    background-color: #0c8e0c;
+    color: white;
+}
+
+.s-btn {
+    border: none;
+}
+
+.s-btn:hover {
+    color: #0aad0a;
+}
+
+.s-info {
+    border: none;
 }
 
 /* footer */
