@@ -332,10 +332,8 @@ body {
 
 /* footer */
 .footer {
-    background-color: #dfe2e1;
-    color: white;
-    padding: 35px;
-    text-align: center;
+ background-color: #001e2b;
+ color: #0aad0a;
 }
 
 .f-head {
