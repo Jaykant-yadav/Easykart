@@ -1,5 +1,5 @@
 <%- layout("./layouts/template.ejs")%>
-  <div class="mt-2 bg-body-tertiary row mb-2 rounded">
+  <div class="mt-4 bg-body-tertiary row mb-2 rounded container-fluid">
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb mt-2">
         <li class="breadcrumb-item"><a href="/easykart">Home</a></li>
@@ -8,19 +8,72 @@
     </nav>
     <div class="col-sm-5 mb-3 mt-2">
       <div class="card card-show rounded">
-        <img src="<%= Products.image.url %>" class="card-img-top" alt="...">
+        <img src="<%= Products.image.url %>" class="card-img-top" alt="..." />
         <div class="card-img-overlay rounded">
           <button class="btn heart"><i class="bi bi-heart"></i></button>
         </div>
       </div>
-      <div class="mt-4">
-        <button class="buy"><i class="bi bi-fire"></i> <a href="#">Buy now</a></button>
-        <button class="cart"><i class="fa-solid fa-cart-plus"></i> <a href="#">Add to cart</a></button>
+      <p class="d-inline-flex gap-1 mt-4">
+        <a class="btn btn-success" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false"
+          aria-controls="collapseExample">
+          Product Details <i class="fa-solid fa-plus"></i>
+        </a>
+      </p>
+      <div class="collapse collapse-horizontal" id="collapseExample">
+        <div class="card card-body row" style="width: 705px; height: 500px">
+          <div col-3>
+            <table class="table table-borderless">
+              <tr>
+                <th class="text-muted">Type</th>
+                <td class="text-muted">Polo Neck</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Fit</th>
+                <td class="text-muted">Regular</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Ideal For</th>
+                <td class="text-muted">Men</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Pattern</th>
+                <td class="text-muted">Solid</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Suitable For</th>
+                <td class="text-muted">Western Wear</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Neck Type</th>
+                <td class="text-muted">Polo Neck</td>
+              </tr>
+              <tr>
+                <th scope="col" class="text-muted">Size</th>
+                <td class="text-muted">
+                  <%= Products.size.toUpperCase() %>
+                </td>
+              </tr>
+            </table>
+            <div>
+              <h4 class="text-muted">Discriptions</h4>
+              <p class="text-muted">
+                With Nova, the traditional Polo makes a stylish comeback. We took
+                the breathable and utterly smooth 100% super combed fabric that
+                has a natural, luxe feel to create our t-shirts. We also went
+                ahead and added ribbed cuffs for a snug fit. The cotton pique
+                fabric adds an element of textural play, while the ribbed collar
+                coupled with the two-button placket gives a smart sign-off to this
+                classic silhouette. Shaped to a regular fit, these tagless designs
+                are ideal for an effortless day-to-night look.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <div class="col-sm-2 col-md-4 mt-5">
       <div class="row">
-        <div class="">
+        <div class="ms-3">
           <p class="brandName mb-0"><b>
               <%= Products.brandName %>
             </b></p>
@@ -28,18 +81,62 @@
             <%= Products.productTitle %>
           </h5>
           <p class="special-price">Special price</p>
-          <p class="card-text">&#8377; <%= Products.price.toLocaleString("en-IN") %>&nbsp;
+          <p class="card-text">
+            &#8377; <%= Products.price.toLocaleString("en-IN") %>&nbsp;
               <s class="disPrice">&#8377;<%= Products.discount.disPrice %></s>&nbsp;
               <span class="off">
                 <%= Products.discount.offPer %>% off
-              </span></p>
-          <p><span class="size"><b>Size</b></span>
+              </span>
+          </p>
+          <p>
+            <span class="size"><b>Size</b></span>
             <%= Products.size.toUpperCase() %>
+          </p>
+          <div>
+            <span class="rating">3.5 <i class="fa-solid fa-star"></i></span>
+            <span>2,214 ratings and 231 reviews</span>
+          </div>
         </div>
-        <hr>
-        <div>
+
+        <hr class="mt-4" />
+        <div class="mt-4">
+          <button class="buy">
+            <i class="bi bi-fire"></i> <a href="#">Buy now</a>
+          </button>
+          <button class="cart">
+            <i class="fa-solid fa-cart-plus"></i> <a href="#">Add to cart</a>
+          </button>
         </div>
+      </div>
+      <div>
+        <table class="table table-light table-borderless mt-4 ms-4">
+          <tr>
+            <th class="text-muted">Product Code</th>
+            <td class="text-muted">FBB00255</td>
+          </tr>
+          <tr>
+            <th class="text-muted">Availability</th>
+            <td class="text-muted">In Stock</td>
+          </tr>
+          <tr>
+            <th class="text-muted">Types: </th>
+            <td class="text-muted">Ledar jacket</td>
+          </tr>
+          <tr>
+            <th class="text-muted">Seller</th>
+            <td class="text-muted">Jaykant-Yadav</td>
+          </tr>
+        </table>
       </div>
     </div>
 
+    <div class="row">
+      <div class="d-flex mt-4 ">
+        <h3>Ratings & Reviews</h3>
+        <p class=" rating ms-5 mt-1">3.5 <i class="fa-solid fa-star"></i></p>
+        <p class="ms-3 me-3 mt-2">2,214 ratings and 231 reviews</p>
+        <button class="rating-p-btn">Rate Product</button>
+      </div>
+      <hr>
+    </div>
   </div>

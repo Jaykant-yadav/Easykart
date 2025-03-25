@@ -330,6 +330,30 @@ body {
     border: none;
 }
 
+.rating {
+    border: 2px solid none;
+    /* width: 10rem; */
+    color: #fff;
+    text-align: center;
+    border-radius: 18px;
+    padding: 4px;
+    background-color: #0aad0a;
+    font-size: 80%;
+}
+
+.t-details {
+    background-color: #f0f3f2;
+}
+
+.rating-p-btn {
+    background-color: #0aad0a;
+    border: none;
+    height: 2rem;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+
 /* footer */
 .footer {
  background-color: #001e2b;
