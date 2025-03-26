@@ -81,10 +81,10 @@ app.get('/easykart', async (req, res) => {
   });
 
 //Deshboard
-// app.get("/deshboard", async (req, res) => {
-//     const AllChat = await Chat.find({});
-//     res.render("./includes/deshboard.ejs", {AllChat});
-// });
+app.get("/sidebars", async (req, res) => {
+    // const  = await .find({});
+    res.render("./layouts/sidebar.ejs", );
+});
 
 // Show Route
 app.get("/products/:id", async (req, res) => {

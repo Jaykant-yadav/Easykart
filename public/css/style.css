@@ -420,6 +420,33 @@ li a {
     /* align-content: end; */
 }
 
+/* Deshboard */
+.deshboard {
+    height: 43rem;
+    width: 18rem;
+}
+
+.deshboard-side {
+
+}
+
+.sidebar-icon a:hover {
+    color: #fff !important;
+}
+
+.sidebar-icon:hover {
+    background-color: #0aad0a;
+    border-radius: 5px;
+    color: #fff;
+}
+
+
+.sidebar-nav {
+    width: 50rem;
+}
+
+
+
 
 /* Testing features */
 .category-section {
