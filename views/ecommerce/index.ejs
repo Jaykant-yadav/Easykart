@@ -6,15 +6,20 @@
                 <% for(product of Products){ %>
                     <div class="col shadow-lg mb-0 p-3 bg-body-tertiary">
                         <div class="card">
-                            <a href="/Products/<%= product._id %>"><img src="<%= product.image.url %>" class="card-img-top" style="height: 22rem;" alt="..."></a>
+                            <a href="/Products/<%= product._id %>"><img src="<%= product.image.url %>"
+                                    class="card-img-top" style="height: 22rem;" alt="..."></a>
                             <div class="card-body">
-                                <p class="brandName mb-0"><b><%= product.brandName %></b></p>
+                                <p class="brandName mb-0"><b>
+                                        <%= product.brandName %>
+                                    </b></p>
                                 <h5 class="card-title">
                                     <%= product.productTitle %>
                                 </h5>
                                 <p class="card-text">&#8377; <%= product.price.toLocaleString("en-IN") %>&nbsp;
                                         <s class="disPrice">&#8377;<%= product.discount.disPrice %></s>&nbsp;
-                                        <span class="off"><%= product.discount.offPer %>% off</span></p>
+                                        <span class="off">
+                                            <%= product.discount.offPer %>% off
+                                        </span></p>
                                 <p><span class="size"><b>Size</b></span>
                                     <%= product.size.toUpperCase() %>
                                 </p>
@@ -24,6 +29,23 @@
                     <% } %>
             </div>
         </div>
+
+        <!-- Testing features -->
+
+        <!-- <div class="category-section">
+            categories.forEach((categoryData) => { %>
+              <h2> categoryData.category.name %></h2>
+              <div class="product-slideshow">
+                categoryData.product.forEach((product) => { %>
+                  <div class="product-slide">
+                    <img src=" product.image.url %>" alt=" product.name %>" />
+                    <h3> product.name %></h3>
+                    <p> product.price %></p>
+                  </div>
+                }); %>
+              </div>
+            }); %>
+          </div> -->
 
 
 </body>

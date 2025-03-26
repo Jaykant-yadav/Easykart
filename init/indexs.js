@@ -12,10 +12,24 @@ async function main() {
   await mongoose.connect('mongodb://127.0.0.1:27017/Easykart');
 }
 
+// Migration Function to add releaseDate
+async function addReleaseDateMigration() {
+  try {
+    await Product.updateMany(
+      {},
+      { $set: { releaseDate: new Date() } }
+    );
+    console.log("Release date added to all documents.");
+  } catch (error) {
+    console.error("Error adding release date:", error);
+  }
+}
+
 const initDB = async () => {
     await Product.deleteMany({});
     await Product.insertMany(ecommerceData.data);
     console.log("data was initialize");
+    await addReleaseDateMigration(); // Run the migration after initialization
 }
 
 initDB();

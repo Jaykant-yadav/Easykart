@@ -139,11 +139,24 @@ body {
     color: white;
 }
 
-/* Featured Categories */
-.featured-Category {}
+/* Featured Product */
+.featured-Category {
+    height: 35rem;
+}
+.f-product {
+    height: 21rem;
+    /* border: 2px solid #0aad0a; */
+}
 
-.fec-img {
-    height: 10rem;
+.hastag{
+    margin-top: 0;
+    color: #fff;
+    font-weight: 700;
+    border: 2px solid none;
+    text-align: center;
+    width: 1.5rem;
+    border-radius: 20px;
+    background-color: #0aad0a;
 }
 
 /* Deshboard - Sidebar */
@@ -406,3 +419,26 @@ li a {
     display: flex;
     /* align-content: end; */
 }
+
+
+/* Testing features */
+.category-section {
+    margin-bottom: 20px;
+  }
+  
+  .product-slideshow {
+    display: flex;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent wrapping */
+  }
+  
+  .product-slide {
+    flex: 0 0 auto;
+    width: 200px; /* Adjust slide width */
+    margin-right: 10px;
+  }
+  
+  .product-slide img {
+    max-width: 100%;
+    height: auto;
+  }

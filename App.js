@@ -59,6 +59,27 @@ app.get("/products/new", (req, res) => {
     res.render("./ecommerce/addNewproduct.ejs");
 });
 
+// Testing 
+app.get('/easykart', async (req, res) => {
+    try {
+      const categories = await products.find({}); // Fetch all categories
+      const categoriesWithProducts = [];
+  
+      for (const category of categories) {
+        const product = await products.findById(id).limit(5); // Fetch 5 products per category
+        categoriesWithProducts.push({
+          category: category,
+          products: product,
+        });
+      }
+  
+      res.render("./ecommerce/index.ejs", { categories: categoriesWithProducts });
+    } catch (error) {
+      console.error(error);
+      res.status(500).send('Error fetching categories and products');
+    }
+  });
+
 //Deshboard
 // app.get("/deshboard", async (req, res) => {
 //     const AllChat = await Chat.find({});

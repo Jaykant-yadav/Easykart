@@ -35,6 +35,10 @@ const productSchema = new Schema({
         url: String,
         filename: String,
     },
+    releaseDate: {
+        type: Date,
+        default: Date.now,
+    },
 });
 
 const Product = mongoose.model("Product", productSchema);
