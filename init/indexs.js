@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-const Product = require("../models/Product.js");
+const Product = require("../models/productModel.js");
 const ecommerceData = require("./productDetails.js");
 
 main()
