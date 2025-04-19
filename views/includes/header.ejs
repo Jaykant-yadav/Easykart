@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid p-1 offset-md-1">
         <div class="row">
-            <a class="navbar-brand" href="/easykart"><i class="fa-solid fa-dumpster"></i> Easykart</a>
+            <a class="navbar-brand" href="/"><i class="fa-solid fa-dumpster"></i> Easykart</a>
         </div>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,13 +10,13 @@
         <div class="collapse navbar-collapse offset-md-1" id="navbarSupportedContent row">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="/easycart">Home</a>
+                    <a class="nav-link fw-semibold text-muted" href="/">Home</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" href="#">Categories</a>
+                    <a class="nav-link fw-semibold text-muted" href="#">Categories</a>
                 </li>
                 <li class="nav-item mx-2">
-                    <a class="nav-link" aria-disabled="true">Today's Deals</a>
+                    <a class="nav-link fw-semibold text-muted" aria-disabled="true">Today's Deals</a>
                 </li>
                 <form class="d-flex search-inp mx-5" role="search">
                     <div class="google-search-container">
@@ -28,10 +28,9 @@
                     </div>
                 </form>
                 <div class="dropdown offset-md-2 ms-5">
-                    <button class="btn btn-light dropdown-toggle" type="button" data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="fa-regular fa-user"></i> Login
-                    </button>
+                    <a href="/users/auth" class="btn btn-light dropdown-toggle">
+                        <i class="fa-regular fa-user"></i> Login / Register	
+                      </a>                      
                     <ul class="dropdown-menu">
                         <li><a class="dropdown-item" href="#">New customer? &nbsp; <span
                                     class="text-success h6">SignUp</span></a></li>

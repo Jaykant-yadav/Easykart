@@ -1,0 +1,89 @@
+
+<%- layout("./layouts/boilerplate.ejs") %>
+
+  <body>
+    <div class="auth-body">
+      <div class="form-container mt-5 login-form">
+        <!-- Nav Tabs -->
+        <ul class="nav nav-pills mb-4 justify-content-center" id="pills-tab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="login-tab" data-bs-toggle="pill" data-bs-target="#login" type="button"
+              role="tab">
+              LOGIN
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link register" id="register-tab" data-bs-toggle="pill" data-bs-target="#register"
+              type="button" role="tab">
+              REGISTER
+            </button>
+          </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div class="tab-content" id="pills-tabContent">
+          <!-- Login Tab -->
+          <div class="tab-pane fade show active" id="login" role="tabpanel">
+            <h5 class="text-center mb-3 text-muted">Sign in with</h5>
+            <div class="d-flex justify-content-center social-icons mb-3">
+              <button class="btn"><i class="bi bi-facebook"></i></button>
+              <button class="btn"><i class="bi bi-google"></i></button>
+              <button class="btn"><i class="bi bi-twitter"></i></button>
+              <button class="btn"><i class="bi bi-github"></i></button>
+            </div>
+
+            <p class="text-center text-muted fw-bold">OR</p>
+
+            <form>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email or username" />
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control" placeholder="Password" />
+              </div>
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                <div>
+                  <input type="checkbox" id="rememberMe" class="form-check-input me-1" />
+                  <label for="rememberMe" class="form-check-label text-dark text-muted">Remember me</label>
+                </div>
+                <a href="#" class="text-decoration-none text-info">Forgot password?</a>
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                SIGN IN
+              </button>
+            </form>
+
+            <p class="text-center mt-3 text-danger text-muted">
+              Not a member? <span class="text-success">Please Register</span>
+              <!-- <p href="#register" id="openRegister" class="text-info" data-bs-toggle="pill" role="tab" aria-controls="register"
+              aria-selected="false">Click Register</p>
+          </p> -->
+          </div>
+
+          <!-- Register Tab -->
+          <div class="tab-pane fade" id="register" role="tabpanel">
+            <h5 class="text-center mb-4 text-muted">Register New Account</h5>
+            <form>
+              <div class="mb-3">
+                <input type="text" class="form-control auth-form" placeholder="Full Name" />
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control  auth-form" placeholder="Email" />
+              </div>
+              <div class="mb-3">
+                <input type="password" class="form-control  auth-form" placeholder="Password" />
+              </div>
+              <button type="submit" class="btn btn-success w-100">
+                REGISTER
+              </button>
+            </form>
+            <p class="text-center mt-3 text-dark text-muted">
+              Already have an account? <span class="text-success">Please Login</span>
+              <!-- <p href="#login" id="openLogin" class="text-info" data-bs-toggle="pill" role="tab" aria-controls="login"
+            aria-selected="false">Click Login</p>
+          </p> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>

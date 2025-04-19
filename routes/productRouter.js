@@ -18,10 +18,14 @@ router.post("/create",upload.single('product[image]'), async(req, res) => {
         // res.send(req.file);
 });
 
+
 // Show Route
-router.get("/products/:id", async (req, res) => {
+router.get("/:id", async (req, res) => {
     let {id} = req.params;
     // console.log(id);
     const Products = await productModel.findById(id);
+    console.log(Products);
     res.render("./pages/productShow.ejs", {Products});
 });
+
+module.exports = router;
